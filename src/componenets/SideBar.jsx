@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { IoMdHome } from "react-icons/io";
 import { FaRegClock } from "react-icons/fa6";
 import { IoIosNotifications } from "react-icons/io";
@@ -41,10 +40,8 @@ const links = [
 ];
 
 const SideBar = () => {
-  const [nav, SetNavBar] = useState(false);
-
   return (
-    <div className="min-h-screen p-4 w-48 text-white fixed z-20 md:sticky top md:left-0 top-0 bg-[#07231c]">
+    <div className="p-4 w-48 text-white fixed z-20 md:sticky top md:left-0 top-0 bg-[#07231c]">
       <ul className=" text-[#07421f]">
         {links.map(({ id, title, Icon, to }) => (
           <li
