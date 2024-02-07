@@ -41,7 +41,7 @@ const links = [
 
 const SideBar = () => {
   return (
-    <div className="p-4 w-48 text-white fixed z-20 md:sticky top md:left-0 top-0 bg-[#07231c]">
+    <div className="p-4 w-70 text-white fixed md:sticky top md:left-0 top-0 bg-[#07231c]">
       <ul className=" text-[#07421f]">
         {links.map(({ id, title, Icon, to }) => (
           <li
