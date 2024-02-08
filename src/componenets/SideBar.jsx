@@ -41,22 +41,23 @@ const links = [
 
 const SideBar = () => {
   return (
-    <div className="p-4 w-70 text-white fixed md:sticky top md:left-0 top-0 bg-[#07231c]">
-      <ul className=" text-[#07421f]">
+    <div className="flex flex-col text-white sticky bg-[#07231c] py-12 basis-60">
+      <h2 className=" self-center mb-10">LOGO</h2>
+      <ul className="text-[#07421f]">
         {links.map(({ id, title, Icon, to }) => (
           <li
             key={id}
-            className=" flex gap-4 px-4 cursor-pointer py-6 font-semibold text-white hover:scale-105 duration-300"
+            className="px-4 py-5 cursor-pointer font-semibold text-white hover:scale-105 duration-300"
           >
-            <a className="flex gap-4 mb-1 " href={to}>
-              <Icon className="mt-1" />
+            <a className="flex gap-4" href={to}>
+              <Icon size={20} className="" />
               {title}
             </a>
           </li>
         ))}
       </ul>
-      <button className="text-white bg-[#ff0600] rounded-md py-2 px-6 mt-auto">
-        <icon src={IoLogOutOutline} alt="" />
+      <button className="flex items-center self-center text-white text-sm bg-[#ff0600] rounded-md py-2 px-4 mt-auto">
+        <IoLogOutOutline size={18} />
         LogOut
       </button>
     </div>

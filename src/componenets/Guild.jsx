@@ -2,6 +2,7 @@ import { MdOutlineSendToMobile } from "react-icons/md";
 import { PiNotebookFill } from "react-icons/pi";
 import { MdLock } from "react-icons/md";
 import { IoIosWifi } from "react-icons/io";
+import App from "../componenets/App";
 
 const links = [
   {
@@ -25,24 +26,25 @@ const links = [
     Icon: IoIosWifi,
   },
 ];
-const Options = () => {
+const Guild = () => {
   return (
-    <div className="flex gap-4 mt-6">
-      <ul className=" text-[#07421f] flex gap-10 mt-2">
+    <div className="flex justify-between gap-10 mt-6 bg-[#07231c] p-4 rounded-lg w-[500px] py-2">
+      <ul className=" text-[#07421f] gap-2 mt-2">
         {links.map(({ id, title, Icon }) => (
           <li
             key={id}
             className="cursor-pointer pb-4 font-semibold text-white hover:scale-105 duration-300"
           >
-            <a className="p-2 items-center ">
-              <Icon className=" bg-[#09231c] rounded-lg mb-2 h-[60px] w-[75px] pt-2 pb-2" />
+            <a className="p-2 flex items-center gap-4 ">
+              <Icon className="flex" />
               {title}
             </a>
           </li>
         ))}
       </ul>
+      <App />
     </div>
   );
 };
 
-export default Options;
+export default Guild;
