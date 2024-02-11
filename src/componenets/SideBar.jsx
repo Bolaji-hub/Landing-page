@@ -4,12 +4,13 @@ import { IoIosNotifications } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { IoIosChatbubbles } from "react-icons/io";
 import { IoLogOutOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const links = [
   {
     id: 1,
     title: "Home",
-    to: "/home",
+    to: "/",
     Icon: IoMdHome,
   },
   {
@@ -49,10 +50,10 @@ const SideBar = () => {
             key={id}
             className="px-4 py-5 cursor-pointer font-semibold text-white hover:scale-105 duration-300"
           >
-            <a className="flex gap-4" href={to}>
+            <Link className="flex gap-4" to={to}>
               <Icon size={20} className="" />
               {title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
