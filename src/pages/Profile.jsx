@@ -1,9 +1,11 @@
-import React from "react";
+import Kyc from "../componenets/Kyc";
+import Security from "../componenets/Security";
 
 const Profiles = () => {
   return (
-    <div>
-      <h1 className="text-6xl font-bold m-9">Profile in progress</h1>
+    <div className="flex gap-5">
+      <Security />
+      <Kyc />
     </div>
   );
 };
